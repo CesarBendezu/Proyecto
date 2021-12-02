@@ -1,0 +1,150 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    width: 100%;
+    max-width: 100%;
+    background: green;
+}
+.container{
+    width: 75%;
+    max-width: 75%;
+    margin: auto;
+    display: flex;
+    padding: 20px;
+}
+.logo{
+    width: 50%;
+    max-width: 50%;
+}
+.logo h1{
+    color:blue;
+    font-size: 55px;
+}
+.logo p{
+    margin-left: 25px;
+    font-size: 20px;
+}
+.user{
+    width: 50%;
+    max-width: 50%;
+    display: flex;
+    padding: 20px;
+}
+.inic{
+    margin: 10px;
+}
+.reg{
+    margin: 10px;
+}
+.user a{
+    text-decoration: none;
+    color: blue;
+    border: 2px solid blue;
+    padding: 15px;
+}
+#reglas{
+    width: 100%;
+    max-width: 100%;
+}
+.contenreg{
+    width: 75%;
+    max-width: 75%;
+    margin: auto;
+}
+ol{
+    padding: 10px;
+}
+ul{
+    padding: 25px;
+}
+p{
+    margin-top: 10px;
+}
+#return{
+    width: 100%;
+    max-width: 100%;
+} 
+.regresar{
+    width: 75%;
+    max-width: 75%;
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+.regresar a{
+    text-align: center;
+    margin-left: 45%;
+    border: 3px solid black;
+    border-radius: 7px;
+    padding: 10px;
+    text-decoration: none;
+    color: blue;
+}
+footer{
+    width: 100%;
+    max-width: 100%;
+    background: green;
+}
+.container2{
+    width: 75%;
+    max-width: 75%;
+    display: block;
+    padding: 20px;
+    margin: auto;
+}
+.name{
+    text-align: center;
+}
+.name h1{
+    color: blue;
+    font-size: 55px;
+}
+.name p{
+    font-size: 25px;
+}
+
+.tyc{
+    text-align: center;
+    padding: 20px;
+}
+.cuad{
+    padding: 10px;
+}
+.cuad a{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+
+}
+@media(max-width: 1024px){
+    .container{
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    }
+    .logo h1{
+        font-size: 33px;
+    }
+    .logo p{
+        font-size: 18px;
+    }
+    .contenreg{
+        width: 100%;
+        max-width: 100%;
+    }
+}
+@media(max-width: 530px){
+    .user a{
+        padding: 7px;
+    }
+}
+@media(max-width: 450px){
+    .user{
+        display: block;
+    }
+    .user a{
+        padding: 0;
+    }
+}
