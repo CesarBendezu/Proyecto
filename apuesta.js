@@ -14,9 +14,7 @@ function Apuesta() {
 	this.validarApuesta = function() {
         var now = new Date();
         now.setHours(0, 0, 0, 0);
-        if (now.getTime() > this.fecha.getTime()) {
-            throw "Debe ingresar una fecha actual o posterior al día de hoy";
-        }
+        
         if (this.monto < 0) {
             throw "El monto a apostar debe ser positivo";
         }
@@ -38,10 +36,10 @@ function Apuesta() {
 	};
 }
 
-function Pleno() {
+function Simple() {
 	"use strict";
 	this.ganancia = 35;
-	this.descripcion = 'Pleno';
+	this.descripcion = 'Simple';
 	this.valoresAApostar = list(1, 36);
     this.validar = function(apuesta) {
         if (apuesta.monto < 10) {
@@ -53,20 +51,20 @@ function Pleno() {
 	};
 }
 
-function Docena() {
+function Combinada() {
 	"use strict";
     this.ganancia = 11;
-	this.descripcion = 'Docena';
-	this.valoresAApostar = [ "Primera", "Segunda", "Tercera" ];
+	this.descripcion = 'Combinada';
+	this.valoresAApostar = [ "Primera", "Segunda"];
 	this.validar = function(apuesta) {
         if (apuesta.monto < 50) {
             throw "Debe apostar más de 50 $";
         }
     };
    this.esGanador = function(numeroGanador, valorApostado){
-	   var docena = this.valoresAApostar.indexOf(valorApostado);
-	   var min = docena* 12 + 1;
-	   var max = (docena + 1)* 12;
+	   var combinada = this.valoresAApostar.indexOf(valorApostado);
+	   var min = combinada >= 1;
+	   var max = combinada >= 2;
 	   return numeroGanador.between(min, max);
    }
 }
