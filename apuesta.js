@@ -42,7 +42,7 @@ function Simple() {
 	this.descripcion = 'Simple';
 	
     this.validar = function(apuesta) {
-        if (apuesta.monto < 10) {
+        if (apuesta.monto > 10) {
             throw "Debe apostar más de 10 $";
         }
     };
@@ -57,7 +57,7 @@ function Combinada() {
 	this.descripcion = 'Combinada';
 	this.valoresAApostar = [ "Primera", "Segunda"];
 	this.validar = function(apuesta) {
-        if (apuesta.monto < 10) {
+        if (apuesta.monto > 10) {
             throw "Debe apostar más de 10 $";
         }
     };
