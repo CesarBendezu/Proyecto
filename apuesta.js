@@ -38,9 +38,9 @@ function Apuesta() {
 
 function Simple() {
 	"use strict";
-	this.ganancia = 35;
+	
 	this.descripcion = 'Simple';
-	this.valoresAApostar = list(1, 36);
+	
     this.validar = function(apuesta) {
         if (apuesta.monto < 10) {
             throw "Debe apostar más de 10 $";
