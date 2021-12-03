@@ -25,61 +25,50 @@
         </div>
     </header>
     <form name="apuestasForm" ng-submit="apuestasCtrl.apostar(apuestasForm)" class="form-horizontal ng-valid-date ng-dirty ng-valid-parse ng-valid ng-valid-required ng-submitted">
-		<div>
-			<div class="alert alert-danger ng-binding" ng-show="apuestasCtrl.errorMessage">
-				Debe apostar más de 10 $
-			</div>
-		</div>
-		<div class="form-group">
-			<div class="col-xs-6 col-md-4" align="right">
-				<label class="control-label"> <b>Fecha:</b>
-				</label>
-			</div>
-			<div class="col-xs-6 col-md-4">
-				<div class="row">
-					<div class="col-md-6">
-						<p class="input-group">
-							<input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-isolate-scope ng-valid-required ng-valid-date" clear-text="Limpiar" current-text="Hoy" close-text="Cerrar" datepicker-popup="dd/MM/yyyy" ng-model="apuestasCtrl.apuesta.fecha" is-open="apuestasCtrl.calendarioAbierto" min-date="apuestasCtrl.fechaMinimaApuesta" datepicker-options="apuestasCtrl.dateOptions" ng-required="true" required="required"><!-- ngIf: isOpen --> <span class="input-group-btn">
-								<button type="button" class="btn btn-default" ng-click="apuestasCtrl.verCalendario($event)">
-									<i class="glyphicon glyphicon-calendar"></i>
-								</button>
-							</span>
-						</p>
-					</div>
+		<div class="apuesta">
+			<div>
+				<div >
+					Debe apostar más de 10 $
 				</div>
-			</div>
-		</div>
-		<div class="form-group">
-			<div class="col-xs-6 col-md-4" align="right">
+			</div>	
+		
+		
+		<div >
+			<div >
 				<b>Monto:</b>
 			</div>
-			<div class="col-xs-6 col-md-4">
-				<input type="number" name="monto" class="form-control ng-pristine ng-valid ng-valid-required ng-touched" ng-model="apuestasCtrl.apuesta.monto" placeholder="Monto en $" required="true">
+			<div >
+				<input type="number" name="monto"  placeholder="Monto en $" required="true">
 			</div>
 		</div>
-		<div class="form-group">
-			<div class="col-xs-6 col-md-4" align="right">
+		<div >
+			<div >
 				<b>Tipo de Apuesta:</b>
 			</div>
-			<div class="col-xs-6 col-md-4">
-				<select name="apuestasCtrl.tipoApuesta" class="form-control ng-dirty ng-valid-parse ng-valid ng-valid-required ng-touched" ng-model="apuestasCtrl.apuesta.tipoApuesta" ng-options="tipo.descripcion for tipo in apuestasCtrl.tiposApuesta" required="true"><option value="object:4" label="Pleno">Pleno</option><option value="object:5" label="Docena">Docena</option></select>
+			<div >
+				<select name="apuestasCtrl.tipoApuesta"  required="true"><option value="object:4" label="Simple">Simple</option><option value="object:5" label="Combinada">Combinada</option></select>
 			</div>
 		</div>
-		<div class="form-group">
-			<div class="col-xs-6 col-md-4" align="right">
-				<b>Qué apostás:</b>
+		<div >
+			<div>
+				<b>A quien le vas ?:</b>
 			</div>
-			<div class="col-xs-6 col-md-4">
-				<select name="apuesta" class="form-control ng-dirty ng-valid-parse ng-valid ng-valid-required ng-touched" ng-model="apuestasCtrl.apuesta.valorApostado" ng-options="valor for valor in apuestasCtrl.apuesta.tipoApuesta.valoresAApostar" ng-disabled="!apuestasCtrl.apuesta.tipoApuesta.valoresAApostar" required="true"><option value="number:1" label="1">1</option><option value="number:2" label="2">2</option><option value="number:3" label="3">3</option><option value="number:4" label="4">4</option><option value="number:5" label="5">5</option><option value="number:6" label="6">6</option><option value="number:7" label="7">7</option><option value="number:8" label="8">8</option><option value="number:9" label="9">9</option><option value="number:10" label="10">10</option><option value="number:11" label="11">11</option><option value="number:12" label="12">12</option><option value="number:13" label="13">13</option><option value="number:14" label="14">14</option><option value="number:15" label="15">15</option><option value="number:16" label="16">16</option><option value="number:17" label="17">17</option><option value="number:18" label="18">18</option><option value="number:19" label="19">19</option><option value="number:20" label="20">20</option><option value="number:21" label="21">21</option><option value="number:22" label="22">22</option><option value="number:23" label="23">23</option><option value="number:24" label="24">24</option><option value="number:25" label="25">25</option><option value="number:26" label="26">26</option><option value="number:27" label="27">27</option><option value="number:28" label="28">28</option><option value="number:29" label="29">29</option><option value="number:30" label="30">30</option><option value="number:31" label="31">31</option><option value="number:32" label="32">32</option><option value="number:33" label="33">33</option><option value="number:34" label="34">34</option><option value="number:35" label="35">35</option><option value="number:36" label="36">36</option></select>
+			<div >
+				<select name="apuesta"    required="true"><option value="Alianza Lima" label="Alianza Lima">Alianza Lima</option><option value="San Marino " label="San Marino">San Marino</option><option value="Empate" label="Empate">Empate</option></select>
 			</div>
 		</div>
-		<div class="form-group" align="center">
+		<div >
 			<button class="btn btn-primary" type="submit">Apostar</button>
 		</div>
-		<div class="form-group" align="center">
-			<div class="alert alert-info ng-binding ng-hide" ng-show="apuestasCtrl.apuesta.resultado">
+		<div >
+			<div>
 				</div>
 		</div>
+	</div>
+	<div class="imagen"> 
+		<img src="imagen/final.png" alt="">
+		
+	</div>
 	</form>
     <footer>
         <div class="container2">
@@ -88,13 +77,13 @@
                 <p>2021</p>
             </div>
             <div class="tyc">
-                <div class="cuad">
+                <div class="Plantilla">
                     <a href="nosotros.html">Nosotros</a>
                 </div>
-                <div class="cuad">
+                <div class="Plantilla">
                     <a href="reglas.html">Reglas</a>
                 </div>
-                <div class="cuad">
+                <div class="Plantilla">
                     <a href="tyc.html">Términos y condiciones</a>
                 </div>
             </div>
