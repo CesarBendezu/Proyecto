@@ -24,7 +24,7 @@
             </div>
         </div>
     </header>
-    <form name="apuestasForm" ng-submit="apuestasCtrl.apostar(apuestasForm)" class="form-horizontal ng-valid-date ng-dirty ng-valid-parse ng-valid ng-valid-required ng-submitted">
+    <form name="apuestas" >
 		<div class="apuesta">
 			<div>
 				<div >
@@ -46,7 +46,7 @@
 				<b>Tipo de Apuesta:</b>
 			</div>
 			<div >
-				<select name="apuestasCtrl.tipoApuesta"  required="true"><option value="object:4" label="Simple">Simple</option><option value="object:5" label="Combinada">Combinada</option></select>
+				<select name="tipoApuesta"  required="true"><option  label="Simple">Simple</option><option label="Combinada">Combinada</option></select>
 			</div>
 		</div>
 		<div >
@@ -58,7 +58,7 @@
 			</div>
 		</div>
 		<div >
-			<button class="btn btn-primary" type="submit">Apostar</button>
+			<button type="submit" class="next"><a href="FinalizarApuesta.html">Apostar</a></button>
 		</div>
 		<div >
 			<div>
@@ -91,7 +91,7 @@
     </footer>
 	<script src="resultado.js" type="text/javascript" charset="utf-8"></script>
 	<script src="apuesta.js" type="text/javascript" charset="utf-8"></script>
-	<script src="app.js" type="text/javascript" charset="utf-8"></script>
+	
 </body>
 <script src="funciones/slider.js"></script>
 </html>
