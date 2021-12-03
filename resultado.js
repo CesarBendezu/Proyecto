@@ -6,8 +6,8 @@ function Resultado(gano, numeroGanador, montoAGanar) {
 
 Resultado.prototype.valor = function() {
     if (this.gano) {
-        return '¡¡ Ganaste $' + this.montoAGanar + " !!";
+        return 'Ganaste ' + this.montoAGanar + " !!";
     } else {
-        return '¡¡Perdiste!! Salió el ' + this.numeroGanador;
+        return 'Perdiste!! No gano ' + this.numeroGanador;
     }
 };
