@@ -57,8 +57,8 @@ function Combinada() {
 	this.descripcion = 'Combinada';
 	this.valoresAApostar = [ "Primera", "Segunda"];
 	this.validar = function(apuesta) {
-        if (apuesta.monto < 50) {
-            throw "Debe apostar más de 50 $";
+        if (apuesta.monto < 10) {
+            throw "Debe apostar más de 10 $";
         }
     };
    this.esGanador = function(numeroGanador, valorApostado){
